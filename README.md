@@ -1,71 +1,82 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # yufaza.github.io
+
+Personal CV &amp; portfolio of **M Yusuf Fajar Zaelani** — Platform Engineer &amp; Enterprise Application Developer.
+
+A fast, responsive, single-page site built with **plain HTML, CSS, and JavaScript** — no build step, no
+framework, no external dependencies. Hosted on **GitHub Pages** at <https://yufaza.github.io>.
+
+Features: light/dark theme toggle, sticky navigation, scroll animations, a project screenshot gallery with
+lightbox, and a one-click **Download CV** (PDF).
+
+---
+
+## 📁 Structure
+
+```
+.
+├── index.html                 ← all page content
+├── css/style.css              ← styling + light/dark theme
+├── js/main.js                 ← theme toggle, menu, animations, lightbox
+├── assets/
+│   ├── img/                   ← profile photo + project screenshots (placeholders)
+│   └── cv/M-Yusuf-Fajar-Zaelani-CV.pdf   ← the downloadable résumé
+├── .nojekyll                  ← tells GitHub Pages to serve files as-is
+└── package.json               ← metadata + local-preview script
+```
+
+---
+
+## 🖼️ Replace the placeholder images
+
+Every image in `assets/img/` is a gray placeholder. **Keep the same file name** and drop in your real
+photo/screenshot — no code changes needed.
+
+| File | Replace with |
+|------|--------------|
+| `profile-photo.png` | Your professional headshot (portrait) |
+| `project-kin-application-center.png` | KIN Application Center (PWA) |
+| `project-kin-chatbot.png` | KIN Chatbot Assistant (GLPI-connected) |
+| `project-kinspire.png` | Kinspire (Kaizen improvement app) |
+| `project-smartkin.png` | SmartKin |
+| `project-sales-demand-planning.png` | Sales Demand Planning |
+| `project-dashboard-metabase.png` | Centralized Dashboard (Metabase) |
+| `project-authentication-sso.png` | Enterprise Authentication (Keycloak SSO) |
+| `project-ai-knowledge-dify.png` | AI Knowledge Platform (Dify) |
+| `project-procure-to-pay.png` | Procure-to-Pay web app |
+| `project-e-canteen.png` | E-Canteen app |
+| `project-otsuka-go.png` | Otsuka GO platform |
+
+> Project screenshots look best at a **16:10 ratio** (e.g. 1200 × 750).
+
+---
+
+## ✏️ Update content
+
+- **Text** (summary, experience, skills, awards): edit `index.html` — sections are clearly commented.
+- **LinkedIn link**: search `index.html` for `linkedin.com/in/yufaza` and set your real URL.
+- **Downloadable CV**: replace `assets/cv/M-Yusuf-Fajar-Zaelani-CV.pdf` (keep the name).
+- **Theme color**: change `--accent` near the top of `css/style.css`.
+
+---
+
+## 👀 Preview locally
+
+Open `index.html` directly, or run a local server:
+
+```bash
+npm start        # serves at http://localhost:3000 (via npx serve)
+```
+
+---
+
+## 🚀 Deploy (GitHub Pages)
+
+This repo is a plain static site served from the **`main` branch root**.
+
+1. Commit and push to `main`.
+2. In GitHub: **Settings → Pages → Build and deployment → Source: “Deploy from a branch”**,
+   Branch: **`main`**, folder: **`/ (root)`**, then **Save**.
+3. Live at <https://yufaza.github.io> within a minute.
+
+> Migrated from a Create React App setup that served the `build` branch. After confirming the new site is
+> live from `main`, the old `build` branch can be deleted.
