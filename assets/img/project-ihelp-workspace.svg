@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">iHelp Workspace capability overview</title>
+  <desc id="description">Projects, tasks, meetings, and reporting in a collaborative workspace, with an MCP interface following user permissions. This is an illustrative diagram, not an application screenshot.</desc>
+  <rect width="960" height="600" fill="#eef5ff"/>
+  <g font-family="Arial, sans-serif" fill="#172b4d">
+    <text x="64" y="88" font-size="20" fill="#375f96">ENTERPRISE COLLABORATION</text>
+    <text x="64" y="146" font-size="46" font-weight="700">iHelp Workspace</text>
+    <text x="64" y="190" font-size="22">Projects, daily work, and meeting follow-through</text>
+    <g fill="#fff" stroke="#c5d6ef" stroke-width="2">
+      <rect x="64" y="232" width="404" height="88" rx="14"/>
+      <rect x="492" y="232" width="404" height="88" rx="14"/>
+      <rect x="64" y="340" width="404" height="88" rx="14"/>
+      <rect x="492" y="340" width="404" height="88" rx="14"/>
+    </g>
+    <g font-size="24" font-weight="700">
+      <text x="88" y="285">Projects &amp; task tracking</text>
+      <text x="516" y="285">Meetings &amp; minutes</text>
+      <text x="88" y="393">Calendars &amp; reporting</text>
+      <text x="516" y="393">AI &amp; MCP integration</text>
+    </g>
+    <rect x="64" y="458" width="832" height="66" rx="14" fill="#172b4d"/>
+    <text x="480" y="500" text-anchor="middle" fill="#fff" font-size="22">MCP access follows user permissions and record visibility</text>
+    <text x="64" y="565" fill="#526783" font-size="16">Illustrative capability overview · Not an application screenshot</text>
+  </g>
+</svg>

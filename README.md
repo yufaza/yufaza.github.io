@@ -1,82 +1,41 @@
-# yufaza.github.io
+# M Yusuf Fajar Zaelani
 
-Personal CV &amp; portfolio of **M Yusuf Fajar Zaelani** — Platform Engineer &amp; Enterprise Application Developer.
+**Platform Engineer · Enterprise Application Developer · Technical Lead**
 
-A fast, responsive, single-page site built with **plain HTML, CSS, and JavaScript** — no build step, no
-framework, no external dependencies. Hosted on **GitHub Pages** at <https://yufaza.github.io>.
+Welcome to my portfolio. I'm Yusuf, a software engineer based in Sukabumi, Indonesia, with experience building enterprise applications, data platforms, and shared services for the manufacturing and food & beverage industry.
 
-Features: light/dark theme toggle, sticky navigation, scroll animations, a project screenshot gallery with
-lightbox, and a one-click **Download CV** (PDF).
+I enjoy turning complex business workflows into practical, maintainable systems. My work combines hands-on engineering with technical leadership, from designing reusable integrations and mentoring developers to supporting production infrastructure.
 
----
+[Explore my portfolio](https://yufaza.github.io) · [Download my CV](assets/cv/M-Yusuf-Fajar-Zaelani-CV.pdf) · [Get in touch](mailto:yufaza@outlook.com)
 
-## 📁 Structure
+## What I work on
 
-```
-.
-├── index.html                 ← all page content
-├── css/style.css              ← styling + light/dark theme
-├── js/main.js                 ← theme toggle, menu, animations, lightbox
-├── assets/
-│   ├── img/                   ← profile photo + project screenshots (placeholders)
-│   └── cv/M-Yusuf-Fajar-Zaelani-CV.pdf   ← the downloadable résumé
-├── .nojekyll                  ← tells GitHub Pages to serve files as-is
-└── package.json               ← metadata + local-preview script
-```
+- **Enterprise applications:** web-based tools for procurement, finance, HR, and operations using TypeScript, Angular, and Node.js.
+- **Shared platforms:** centralized authentication, SAP integration, reusable APIs, service SDKs, and notifications.
+- **Data engineering:** Apache Airflow pipelines and PostgreSQL / BigQuery warehouses that bring operational data together for reporting.
+- **Automation and AI:** browser automation, enterprise AI workflows, and an App Center assistant connecting Metabase, DBHub, and application-specific MCP services through a shared gateway.
+- **Infrastructure and delivery:** Linux, Docker, Nginx, and consistent release practices for enterprise services.
 
----
+## Selected projects
 
-## 🖼️ Replace the placeholder images
+My portfolio highlights both business applications and the platforms behind them:
 
-Every image in `assets/img/` is a gray placeholder. **Keep the same file name** and drop in your real
-photo/screenshot — no code changes needed.
+- **iHelp Workspace:** a GLPI-integrated collaboration workspace for projects, tasks, meetings, calendars, and reporting, with an MCP interface that follows user permissions and record visibility.
+- **KIN Application Center:** a shared entry point for internal applications, dashboards, and notifications.
+- **Enterprise Authentication:** Keycloak single sign-on across enterprise applications.
+- **SAP Integration Platform:** reusable interfaces connecting business applications with SAP.
+- **Enterprise Data Platform:** pipelines that consolidate application, SAP, and operational data for analytics.
+- **Enterprise AI Assistant & MCP Gateway:** centralized chat in App Center that connects Metabase, DBHub, and application-specific MCP services for seamless workflows within each employee’s existing permissions. KIN Chatbot also provides conversational access to GLPI information.
+- **Procure-to-Pay, E-Canteen, and Kinspire:** applications supporting procurement, employee services, and continuous improvement.
 
-| File | Replace with |
-|------|--------------|
-| `profile-photo.png` | Your professional headshot (portrait) |
-| `project-kin-application-center.png` | KIN Application Center (PWA) |
-| `project-kin-chatbot.png` | KIN Chatbot Assistant (GLPI-connected) |
-| `project-kinspire.png` | Kinspire (Kaizen improvement app) |
-| `project-smartkin.png` | SmartKin |
-| `project-sales-demand-planning.png` | Sales Demand Planning |
-| `project-dashboard-metabase.png` | Centralized Dashboard (Metabase) |
-| `project-authentication-sso.png` | Enterprise Authentication (Keycloak SSO) |
-| `project-ai-knowledge-dify.png` | AI Knowledge Platform (Dify) |
-| `project-procure-to-pay.png` | Procure-to-Pay web app |
-| `project-e-canteen.png` | E-Canteen app |
-| `project-otsuka-go.png` | Otsuka GO platform |
+[View the project showcase](https://yufaza.github.io/#projects)
 
-> Project screenshots look best at a **16:10 ratio** (e.g. 1200 × 750).
+## Let's connect
 
----
+I'm happy to discuss engineering opportunities, enterprise platforms, and practical ways to improve business systems.
 
-## ✏️ Update content
+- **Email:** [yufaza@outlook.com](mailto:yufaza@outlook.com)
+- **LinkedIn:** [M Yusuf Fajar Zaelani](https://www.linkedin.com/in/yufaza)
+- **GitHub:** [@yufaza](https://github.com/yufaza)
 
-- **Text** (summary, experience, skills, awards): edit `index.html` — sections are clearly commented.
-- **LinkedIn link**: search `index.html` for `linkedin.com/in/yufaza` and set your real URL.
-- **Downloadable CV**: replace `assets/cv/M-Yusuf-Fajar-Zaelani-CV.pdf` (keep the name).
-- **Theme color**: change `--accent` near the top of `css/style.css`.
-
----
-
-## 👀 Preview locally
-
-Open `index.html` directly, or run a local server:
-
-```bash
-npm start        # serves at http://localhost:3000 (via npx serve)
-```
-
----
-
-## 🚀 Deploy (GitHub Pages)
-
-This repo is a plain static site served from the **`main` branch root**.
-
-1. Commit and push to `main`.
-2. In GitHub: **Settings → Pages → Build and deployment → Source: “Deploy from a branch”**,
-   Branch: **`main`**, folder: **`/ (root)`**, then **Save**.
-3. Live at <https://yufaza.github.io> within a minute.
-
-> Migrated from a Create React App setup that served the `build` branch. After confirming the new site is
-> live from `main`, the old `build` branch can be deleted.
+Thank you for visiting.

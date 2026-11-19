@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMARTKIN — Factory Operations &amp; Performance | M Yusuf Fajar Zaelani</title>
+  <meta name="description" content="How SMARTKIN connects sales demand, factory readiness, production timelines, manpower, utilities, quality control, and SAP reconciliation for efficient, cost-effective operations." />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/projects.css" />
+  <!-- Set theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a href="../index.html#top" class="brand" aria-label="Home">
+        <span class="brand-mark">MYF</span>
+        <span class="brand-name">M Yusuf Fajar Zaelani</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#competencies">Competencies</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#platforms">Platforms</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#awards">Awards</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-sm btn-primary" href="../assets/cv/M-Yusuf-Fajar-Zaelani-CV.pdf" download>Download CV</a>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="project-detail">
+    <section class="project-hero section-alt">
+      <div class="container">
+        <a class="project-back" href="../index.html#projects">&larr; All projects</a>
+        <div class="project-heading"><span class="kicker">Project case study</span><span class="draft-badge">Factory operations platform</span></div>
+        <h1>SMARTKIN</h1>
+        <p class="project-lead">Connecting production, people, utility consumption, and quality into a traceable view of factory performance.</p>
+        <div class="project-draft-note"><strong>Built for efficiency and cost effectiveness:</strong> connect sales demand, factory readiness, production timing, and manpower so teams can coordinate resources and understand the results.</div>
+      </div>
+    </section>
+    <div class="container project-layout">
+      <aside class="project-outline" aria-label="On this page"><span class="kicker">On this page</span><nav><a href="#overview">Overview</a><a href="#challenge">The challenge</a><a href="#features">Key features</a><a href="#workflow">How it works</a><a href="#contribution">My contribution</a><a href="#technology">Technology & architecture</a><a href="#outcomes">Outcomes & lessons</a></nav><a class="project-contact" href="../index.html#contact">Discuss this project &rarr;</a></aside>
+      <article class="project-story" aria-label="SMARTKIN case study">
+        <figure class="project-cover"><img src="../assets/img/project-smartkin.png" alt="SmartKin application" width="1200" height="750" /><figcaption>Visual placeholder &mdash; application screenshots will be added later.</figcaption></figure>
+
+<section id="overview" class="case-section">
+  <span class="kicker">01</span><h2>A connected picture of factory performance</h2>
+  <p>SMARTKIN is an internal manufacturing application I built for KinDairy. It brings production orders, machine activity, output, manpower schedules, attendance claims, utility consumption, and quality control into a connected operational workflow.</p>
+  <p>A production number becomes more useful when people can explain it. Which machines ran the order? How much time was running, idle, or downtime? Who was working in that area? How much electricity and water was consumed? Was the product released on time and without resampling? Does the recorded output agree with SAP? SMARTKIN is built to connect those questions rather than leave each one in a separate report.</p>
+  <p>The application supports decisions about capacity, labor productivity, resource consumption, quality, and production losses with traceable evidence. Its planning calculations connect the work to be done with the time and people required, supporting efficient processes and cost-effective resource use. The work includes daily operational input, supervisor review, and management reporting.</p>
+</section>
+<section id="challenge" class="case-section">
+  <span class="kicker">02</span><h2>The hard part: agreeing on what the numbers mean</h2>
+  <p>The hardest problems have often appeared between systems and definitions. An attendance scan, an approved work claim, a machine log, and a SAP confirmation describe different parts of the same day. Joining them without respecting those differences can produce a convincing report with an incorrect result.</p>
+  <ul class="case-list">
+    <li><strong>A production day crosses midnight</strong><p>The factory reports from 06:00 WIB to the following 06:00. Night-shift exits can arrive after that boundary. I had to separate the reporting window from the scan-retrieval window so a late exit could close the correct shift without changing which production day the work belongs to.</p></li>
+    <li><strong>Attendance is not automatically production labor</strong><p>Being present in an area does not mean a person spent every minute on one order. People move, machines share areas, and several orders can compete for the same pool of labor. The allocation needs explicit device-to-machine relationships and time-based weighting, with a way to inspect who contributed to the result.</p></li>
+    <li><strong>Different processes need different treatment</strong><p>Mixing, filling, retort, and packing cannot always share one output calculation. A product passing through several stages must not be counted repeatedly as finished output. Machine speeds also change, so using today's master speed for an old reading can silently restate historical OEE.</p></li>
+    <li><strong>A valid comparison needs the same scope</strong><p>SAP confirmations and local machine logs do not arrive at the same time or always use the same time definitions. Reconciliation has to compare compatible measures across the whole production order. A date filter should select the orders to investigate without accidentally comparing partial local activity with a full-order SAP total.</p></li>
+    <li><strong>Consumption needs complete, comparable readings</strong><p>Utility reporting has a different rhythm from shift production. A daily electricity value depends on consecutive meter readings; a missing reading cannot be treated as zero. Main meters and submeters can cover the same consumption, so combining them without clear scopes would double-count energy. Water, electricity, and billing periods also need their own units and boundaries.</p></li>
+    <li><strong>Produced does not automatically mean released</strong><p>QC follows what happens after production: sampling, resampling, rejection, and release. Those events need to stay linked to the right order, with consistent quantities and dates. First-time quality and on-time release answer different questions, so one overall production figure cannot substitute for both.</p></li>
+  </ul>
+</section>
+<section id="features" class="case-section">
+  <span class="kicker">03</span><h2>From operational input to reviewable reports</h2>
+  <ul class="case-list">
+    <li><strong>Production and machine reporting</strong><p>Record running, idle, and downtime intervals with their reasons, production order, output, rejects, and relevant process parameters. Shift reports and the machine cockpit connect daily input with the evidence behind production and OEE reporting.</p></li>
+    <li><strong>Manpower scheduling, claims, and activity</strong><p>Sales demand and confirmed factory readiness drive the automatic calculation of production timelines and manpower requirements, covering direct and daily labor. Employee shifts and group assignments connect the plan with attendance review and approved work claims. Group activity input lets teams explain non-production time in an area instead of leaving every idle period as an unexplained gap.</p></li>
+    <li><strong>Hourly labor allocation and productivity</strong><p>Connect approved claimed time to machine and order activity. Reports expose regular and overtime hours, employee-level allocation details, and productivity measures such as labor hours per ton, with drill-downs to the contributing records.</p></li>
+    <li><strong>Production-order review and SAP reconciliation</strong><p>Compare SMARTKIN output, operational hours, and manhours with SAP's mirrored confirmation data. Review mismatches and orders present on only one side, then inspect machine logs and manpower detail to understand the difference.</p></li>
+    <li><strong>Utility consumption and billing</strong><p>Capture electricity and water readings, apply the relevant consumption and sharing rules, and review daily, weekly, or monthly trends. Completeness indicators, meter-level detail, and billing reports help distinguish an actual consumption change from missing or partial data.</p></li>
+    <li><strong>Quality control and release performance</strong><p>Record sampling, resampling, released and rejected quantities, and packing rejects against production orders. Quality reporting brings together first-time-quality results, release timing against category targets, and the records behind each outcome.</p></li>
+    <li><strong>Historical controls</strong><p>Capture the machine speed used for an output reading, preserve accepted production-order facts as versioned validation snapshots, and mark affected orders for review when relevant inputs change. Production-period locks provide a separate control over edits to closed operational periods.</p></li>
+  </ul>
+</section>
+<section id="workflow" class="case-section">
+  <span class="kicker">04</span><h2>How the pieces work together</h2>
+  <ol class="case-steps">
+    <li><strong>Connect demand with factory readiness</strong><p>Sales demand establishes the production requirement. The factory confirms readiness, including the production start date and material arrival, giving SMARTKIN the context for its planning calculations.</p></li>
+    <li><strong>Calculate the timeline and manpower</strong><p>SMARTKIN automatically calculates the production timeline and manpower requirements for direct and daily labor. Connecting these plans helps teams coordinate work and staffing around demand, with process efficiency and cost effectiveness as the purpose of the calculation.</p></li>
+    <li><strong>Capture and review actual activity</strong><p>Record machine intervals and output, bring in attendance signals, and review the work claims and activity explanations. Capture utility readings and QC sampling, reject, and release records in their respective workflows. Missing-time and detail checks help users find incomplete inputs before trusting the totals.</p></li>
+    <li><strong>Calculate at the right level</strong><p>Resolve time against production days and shifts. Allocate claimed labor using the relevant device, machine, and hourly activity relationships, then build consistent order and period summaries. Calculate utility consumption within its meter scope and reporting period, and quality results from their sampling and release rules.</p></li>
+    <li><strong>Investigate and validate</strong><p>Follow a report total into its machine logs and employee allocations. Compare compatible order totals with SAP and validate the reviewed production order, keeping an identifiable revision of its accepted operational facts.</p></li>
+    <li><strong>Handle corrections explicitly</strong><p>Relevant source changes can make a validated order stale. Revalidation creates another revision while retaining earlier evidence; period locks govern whether the underlying operational records can be edited.</p></li>
+  </ol>
+  <figure class="system-flow">
+    <figcaption><strong>From sales demand to an efficient production plan</strong><span>Confirmed factory readiness drives automatic timeline and manpower calculations.</span></figcaption>
+    <div class="system-flow-scroll" tabindex="0" role="region" aria-label="Sales demand, factory readiness, timeline and manpower planning flow, scroll horizontally to explore">
+      <svg class="system-flow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 410" role="img" aria-labelledby="manpower-flow-title manpower-flow-desc">
+        <title id="manpower-flow-title">Demand, factory readiness, and automatic production and manpower planning</title>
+        <desc id="manpower-flow-desc">Sales demand goes to the factory to confirm readiness, including the production start date and material arrival. SMARTKIN then automatically calculates two connected outputs: the production timeline and manpower requirements for direct and daily labor. The purpose is process efficiency and cost effectiveness.</desc>
+        <defs><marker id="manpower-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" /></marker></defs>
+        <g class="flow-lanes"><rect x="12" y="16" width="876" height="378" rx="16" /></g>
+        <g class="flow-headings"><text x="30" y="48">DEMAND &amp; READINESS</text><text x="30" y="225">PLANNING OUTPUTS</text></g>
+        <g class="flow-edges" marker-end="url(#manpower-flow-arrow)">
+          <path d="M260 119 L334 119" /><path d="M564 119 L638 119" />
+          <path d="M753 162 L753 218 L449 218 L449 260" /><path d="M753 162 L753 260" />
+        </g>
+        <g class="flow-card" transform="translate(30 76)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">SALES</text><text class="flow-name" x="16" y="49">Sales demand</text><text class="flow-detail" x="16" y="70">Production requirements</text></g>
+        <g class="flow-card" transform="translate(334 76)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">FACTORY CONFIRMATION</text><text class="flow-name" x="16" y="49">Readiness confirmed</text><text class="flow-detail" x="16" y="70">Start date and material arrival</text></g>
+        <g class="flow-card" transform="translate(638 76)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">SMARTKIN</text><text class="flow-name" x="16" y="49">Automatic calculations</text><text class="flow-detail" x="16" y="70">Connect timing and staffing needs</text></g>
+        <g class="flow-card flow-result" transform="translate(334 260)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">TIMELINE</text><text class="flow-name" x="16" y="49">Production timeline</text><text class="flow-detail" x="16" y="70">Coordinate the production process</text></g>
+        <g class="flow-card flow-result" transform="translate(638 260)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">MANPOWER</text><text class="flow-name" x="16" y="49">Direct &amp; daily labor</text><text class="flow-detail" x="16" y="70">Calculate manpower requirements</text></g>
+      </svg>
+    </div>
+    <p class="system-flow-note"><strong>Purpose: process efficiency and cost effectiveness.</strong> Coordinate demand, material readiness, production timing, and labor requirements in one planning flow.</p>
+  </figure>
+</section>
+<section id="contribution" class="case-section">
+  <span class="kicker">05</span><h2>My work on SMARTKIN</h2>
+  <p>My work spans the user interface, application services, reporting calculations, and integration across production, manpower, utility, quality, and enterprise reporting. It involves translating operational questions into data relationships, tracing discrepancies back to their source, and refining the workflow with the people who need to use it.</p>
+  <p>Much of the engineering is investigative. When a night-shift timeline ended too early, the fix required tracing the actual exit scan and the query boundary. When labor appeared against unrelated machines, the question was how the allocation reached those machines through the area mapping. When SAP and SMARTKIN differed, the comparison needed a review of order scope and output selection before changing a formula.</p>
+  <p>Utility and QC bring additional reporting rules into that work: retaining gaps in meter data, separating overlapping consumption scopes, and connecting release and reject records to the relevant production order. These modules extend the same aim of making a reported result explainable.
+  </p>
+  <p>I also work on making corrections safe: preserving stored assignments when removing edit fields, keeping historical calculation inputs with their readings, retaining snapshot revisions, and reusing the application's existing screens and APIs so fixes stay consistent across reports.</p>
+</section>
+<section id="technology" class="case-section">
+  <span class="kicker">06</span><h2>Architecture built around operational facts</h2>
+  <p>The application combines a web interface for daily operations, application services that manage workflows and validation, and a central data layer for operational records. Shared calculations support machine time, manpower allocation, production output, utility consumption, and quality reporting, with consistent definitions within each workflow.</p>
+  <figure class="system-flow">
+    <figcaption><strong>How information connects in SMARTKIN</strong><span>Production, Manpower, Utility, and QC each retain their own review and calculation rules. Scroll across on smaller screens.</span></figcaption>
+    <div class="system-flow-scroll" tabindex="0" role="region" aria-label="SMARTKIN data flow diagram, scroll horizontally to explore">
+      <svg class="system-flow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" role="img" aria-labelledby="smartkin-flow-title smartkin-flow-desc">
+        <title id="smartkin-flow-title">SMARTKIN production, manpower, utility, and QC data flow</title>
+        <desc id="smartkin-flow-desc">Five related workflows: production records are reviewed for OEE and loss reporting; attendance evidence becomes approved labor allocations for productivity; utility readings are checked for scope and completeness for consumption and billing analysis; sampling, release, and reject records support quality performance; SAP confirmations are compared with local order totals for reconciliation.</desc>
+        <defs><marker id="smartkin-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" /></marker></defs>
+        <g class="flow-lanes"><rect x="12" y="16" width="266" height="768" rx="16" /><rect x="316" y="16" width="266" height="768" rx="16" /><rect x="620" y="16" width="266" height="768" rx="16" /></g>
+        <g class="flow-headings"><text x="30" y="48">INPUTS</text><text x="334" y="48">REVIEW &amp; CALCULATE</text><text x="638" y="48">USED FOR</text></g>
+<g class="flow-edges" marker-end="url(#smartkin-flow-arrow)"><path d="M260 139 C294 139 300 163 334 163" /><path d="M564 163 C600 163 600 139 638 139" /></g>
+<g class="flow-card" transform="translate(30 96)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">PRODUCTION</text><text class="flow-name" x="16" y="49">Machine activity &amp; output</text><text class="flow-detail" x="16" y="70">Running, idle, downtime, output</text></g>
+<g class="flow-card" transform="translate(334 120)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">PRODUCTION REVIEW</text><text class="flow-name" x="16" y="49">Reviewed production</text><text class="flow-detail" x="16" y="70">Time, output, and losses</text></g>
+<g class="flow-card flow-result" transform="translate(638 96)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">PERFORMANCE</text><text class="flow-name" x="16" y="49">OEE &amp; loss visibility</text><text class="flow-detail" x="16" y="70">Shift and order reporting</text></g>
+<g class="flow-edges" marker-end="url(#smartkin-flow-arrow)"><path d="M260 279 C294 279 300 303 334 303" /><path d="M564 303 C600 303 600 279 638 279" /></g>
+<g class="flow-card" transform="translate(30 236)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">MANPOWER</text><text class="flow-name" x="16" y="49">Schedules &amp; attendance</text><text class="flow-detail" x="16" y="70">Shift plans and movement evidence</text></g>
+<g class="flow-card" transform="translate(334 260)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">MANPOWER REVIEW</text><text class="flow-name" x="16" y="49">Reviewed labor</text><text class="flow-detail" x="16" y="70">Approved claims and allocations</text></g>
+<g class="flow-card flow-result" transform="translate(638 236)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">PRODUCTIVITY</text><text class="flow-name" x="16" y="49">Manpower productivity</text><text class="flow-detail" x="16" y="70">Labor use and contribution</text></g>
+<g class="flow-edges" marker-end="url(#smartkin-flow-arrow)"><path d="M260 419 C294 419 300 443 334 443" /><path d="M564 443 C600 443 600 419 638 419" /></g>
+<g class="flow-card" transform="translate(30 376)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">UTILITY</text><text class="flow-name" x="16" y="49">Electricity &amp; water readings</text><text class="flow-detail" x="16" y="70">Meter records and billing inputs</text></g>
+<g class="flow-card" transform="translate(334 400)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">CONSUMPTION REVIEW</text><text class="flow-name" x="16" y="49">Consumption calculations</text><text class="flow-detail" x="16" y="70">Meter scope and completeness</text></g>
+<g class="flow-card flow-result" transform="translate(638 376)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">RESOURCES</text><text class="flow-name" x="16" y="49">Utility analysis</text><text class="flow-detail" x="16" y="70">Consumption trends and billing</text></g>
+<g class="flow-edges" marker-end="url(#smartkin-flow-arrow)"><path d="M260 559 C294 559 300 583 334 583" /><path d="M564 583 C600 583 600 559 638 559" /></g>
+<g class="flow-card" transform="translate(30 516)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">QUALITY CONTROL</text><text class="flow-name" x="16" y="49">Sampling, release &amp; rejects</text><text class="flow-detail" x="16" y="70">Order-linked quality records</text></g>
+<g class="flow-card" transform="translate(334 540)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">QUALITY REVIEW</text><text class="flow-name" x="16" y="49">Release &amp; quality checks</text><text class="flow-detail" x="16" y="70">Quantities, dates, and targets</text></g>
+<g class="flow-card flow-result" transform="translate(638 516)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">QUALITY</text><text class="flow-name" x="16" y="49">Quality performance</text><text class="flow-detail" x="16" y="70">First-time quality, release timing</text></g>
+<g class="flow-edges" marker-end="url(#smartkin-flow-arrow)"><path class="flow-external-edge" d="M260 699 C294 699 300 723 334 723" /><path d="M564 723 C600 723 600 699 638 699" /></g>
+<g class="flow-card flow-external" transform="translate(30 656)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">EXTERNAL REFERENCE</text><text class="flow-name" x="16" y="49">SAP production data</text><text class="flow-detail" x="16" y="70">Orders and confirmations</text></g>
+<g class="flow-card" transform="translate(334 680)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">ORDER COMPARISON</text><text class="flow-name" x="16" y="49">Reconciliation</text><text class="flow-detail" x="16" y="70">SMARTKIN and SAP order totals</text></g>
+<g class="flow-card flow-result" transform="translate(638 656)"><rect width="230" height="86" rx="12" /><text class="flow-label" x="16" y="25">RECONCILIATION</text><text class="flow-name" x="16" y="49">Order comparison</text><text class="flow-detail" x="16" y="70">Differences to investigate</text></g>
+      </svg>
+    </div>
+    <p class="system-flow-note">Each row shows a main workflow. Production and manpower totals also feed order reconciliation; utility and QC retain their own reporting measures. The dashed arrow marks the SAP reference.</p>
+  </figure>
+  <p>These sources retain distinct responsibilities. Attendance data supplies presence and movement evidence; approved claims provide the reviewed labor input. The SAP mirror supplies external order and confirmation data. SMARTKIN's validation snapshots preserve its accepted operational facts, while reconciliation continues to compare against SAP data separately.</p>
+  <p>A key design decision was to make the FR-device-to-machine allocation change effective by production date. Earlier activity retains the legacy work-center rule; newer activity uses direct machine mappings. That makes the formula boundary explicit without treating a formula change as permission to rewrite every earlier result.</p>
+</section>
+<section id="outcomes" class="case-section">
+  <span class="kicker">07</span><h2>A coordinated basis for efficient operations</h2>
+  <p>SMARTKIN now connects operational input, calculation, drill-down, reconciliation, and review in one application. Its value is the ability to move from a reported total to the records and decisions behind it, identify what is incomplete, and correct it through a controlled workflow.</p>
+  <p>The result is a connected basis for planning production and manpower, reviewing production losses, labor use, utility consumption, quality performance, and comparing actual factory activity with SAP confirmations. These calculations and review tools support efficient processes and cost-effective decisions about time, staffing, and resources.</p>
+  <p>The main lesson is that trust comes from explicit definitions and visible evidence. More charts do not resolve a missing exit scan, a shared labor pool, or a changed historical speed. Handling those details carefully is what makes the reporting useful.</p>
+</section>
+      </article>
+    </div>
+    <nav class="container project-pagination" aria-label="More projects"><a href="kinspire.html"><small>&larr; Previous project</small><strong>Kinspire</strong></a><a href="sales-demand-planning.html"><small>Next project &rarr;</small><strong>Sales Demand Planning</strong></a></nav>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> M Yusuf Fajar Zaelani</p>
+      <a href="#top" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

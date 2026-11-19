@@ -236,6 +236,8 @@ h1,h2,h3{ line-height:1.2; color:var(--ink); }
 .proj-card figcaption{ padding:18px 20px 22px; }
 .proj-card figcaption h3{ font-size:1.05rem; margin-bottom:6px; }
 .proj-card figcaption p{ font-size:.9rem; color:var(--muted); }
+.project-detail-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--accent);font-size:.9rem;font-weight:600}
+.project-detail-link:hover{text-decoration:underline}
 
 /* ---------- Skills ---------- */
 .skills-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:22px 40px; }

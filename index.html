@@ -147,7 +147,7 @@
           <div class="comp-card reveal"><span class="comp-ico">📊</span><h3>Data Engineering</h3><p>ETL/ELT pipelines &amp; data warehouse design.</p></div>
           <div class="comp-card reveal"><span class="comp-ico">🐳</span><h3>Infrastructure &amp; DevOps</h3><p>Linux, Docker, Nginx, release management.</p></div>
           <div class="comp-card reveal"><span class="comp-ico">🤖</span><h3>Browser Automation</h3><p>Scheduled automation, scraping, portal integration.</p></div>
-          <div class="comp-card reveal"><span class="comp-ico">🧠</span><h3>AI / LLM Integration</h3><p>Dify, MCP, and LLM workflows over enterprise data.</p></div>
+          <div class="comp-card reveal"><span class="comp-ico">🧠</span><h3>AI / LLM Integration</h3><p>Centralized assistants and MCP gateways connecting Metabase, DBHub, and enterprise applications with user-specific access.</p></div>
           <div class="comp-card reveal"><span class="comp-ico">👥</span><h3>Technical Leadership</h3><p>Mentoring, reviews, and engineering standards.</p></div>
           <div class="comp-card reveal"><span class="comp-ico">🔌</span><h3>API Design &amp; Integration</h3><p>Consistent, well-documented REST interfaces.</p></div>
         </div>
@@ -179,7 +179,7 @@
                 <li><strong>Architected central SAP integration middleware and a shared SDK</strong> so applications consume enterprise services through reusable APIs — removing point-to-point connections and duplicated code.</li>
                 <li><strong>Built an enterprise data platform</strong> with Apache Airflow (ETL/ELT), consolidating SAP, application, Excel, and operational data into a PostgreSQL and BigQuery warehouse.</li>
                 <li><strong>Delivered a browser automation platform</strong> to replace legacy RPA — scheduled automation, web scraping, B2B portal integration, and automated report retrieval.</li>
-                <li><strong>Introduced an internal AI knowledge platform</strong> (Dify + MCP) for database knowledge retrieval and automated project summaries, integrating AI directly with enterprise data.</li>
+                <li><strong>Implemented a centralized AI assistant in KIN Application Center</strong>, connecting Metabase, DBHub, and application-specific MCP services through an MCP gateway for seamless workflows within each employee’s existing permissions.</li>
                 <li><strong>Standardized production infrastructure and release management</strong> across Linux servers (Docker, Nginx, PM2, SSL, reverse proxy), improving deployment consistency and reliability.</li>
               </ul>
             </div>
@@ -239,7 +239,7 @@
           <div class="plat-card reveal"><span class="plat-ico">🤖</span><h3>Browser Automation Platform</h3><p>Scheduled automation, web scraping, B2B portal integration, and automated report retrieval — replacing legacy RPA.</p></div>
           <div class="plat-card reveal"><span class="plat-ico">📣</span><h3>Notification Platform</h3><p>A single service delivering email and push notifications, designed to extend to future channels.</p></div>
           <div class="plat-card reveal"><span class="plat-ico">📈</span><h3>Centralized Dashboard Platform</h3><p>Standardized, secure reporting through Metabase instead of direct database access.</p></div>
-          <div class="plat-card reveal"><span class="plat-ico">🧠</span><h3>AI Knowledge Platform</h3><p>LLM workflows (Dify + MCP) for database knowledge retrieval, project summaries, and operational insight.</p></div>
+          <div class="plat-card reveal"><span class="plat-ico">🧠</span><h3>Enterprise AI Assistant &amp; MCP Gateway</h3><p>App Center chat connects Metabase, DBHub, and application-specific MCP services through a shared gateway, within each employee’s existing permissions.</p></div>
           <div class="plat-card reveal"><span class="plat-ico">📦</span><h3>Shared Service SDK</h3><p>Standardized interfaces and central configuration for consuming enterprise services, cutting duplicated code.</p></div>
         </div>
       </div>
@@ -253,75 +253,81 @@
         <div class="section-head reveal">
           <span class="kicker">05 — Showcase</span>
           <h2>Featured Projects</h2>
-          <p class="section-intro">Replace each placeholder with a real screenshot of the system. Click an image to enlarge.</p>
+          <p class="section-intro">Explore the projects and the systems behind them. Open a project for its draft case study, or click an image to enlarge.</p>
         </div>
         <div class="proj-grid">
+          <figure class="proj-card reveal" id="project-ihelp-workspace">
+            <button class="proj-media" data-full="assets/img/project-ihelp-workspace.svg" aria-label="Enlarge iHelp Workspace capability diagram">
+              <img src="assets/img/project-ihelp-workspace.svg" alt="Illustrative iHelp Workspace overview: projects, tasks, meetings, reporting, and permission-aware MCP integration" loading="lazy" />
+            </button>
+            <figcaption><h3>iHelp Workspace</h3><p>GLPI-integrated collaboration workspace for projects, task tracking, meetings and minutes, calendars, and reporting. Its MCP interface lets AI assistants work with authorized workspace capabilities while preserving user permissions and record visibility.</p><a class="project-detail-link" href="projects/ihelp-workspace.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+          </figure>
           <!-- REPLACE each image in assets/img/ with your real screenshot (keep the same file name). -->
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-kin-application-center.png" aria-label="Enlarge KIN Application Center screenshot">
               <img src="assets/img/project-kin-application-center.png" alt="KIN Application Center (PWA)" loading="lazy" />
             </button>
-            <figcaption><h3>KIN Application Center</h3><p>The main enterprise PWA and entry point to internal apps — with a built-in dashboard and notification service so employees instantly see shared dashboards and push notifications.</p></figcaption>
+            <figcaption><h3>KIN Application Center</h3><p>The main enterprise PWA and entry point to internal apps — with shared dashboards, notifications, and a centralized AI assistant connected through an MCP gateway to Metabase, DBHub, and application-specific MCP services, within each employee’s existing permissions.</p><a class="project-detail-link" href="projects/kin-application-center.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-kin-chatbot.png" aria-label="Enlarge KIN Chatbot Assistant screenshot">
               <img src="assets/img/project-kin-chatbot.png" alt="KIN Chatbot Assistant (GLPI-connected)" loading="lazy" />
             </button>
-            <figcaption><h3>KIN Chatbot Assistant</h3><p>Conversational AI assistant connected to GLPI — answers questions about tasks, projects, and assets so teams get operational information instantly.</p></figcaption>
+            <figcaption><h3>KIN Chatbot Assistant</h3><p>Conversational AI assistant connected to GLPI — answers questions about tasks, projects, and assets so teams get operational information instantly.</p><a class="project-detail-link" href="projects/kin-chatbot-assistant.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-kinspire.png" aria-label="Enlarge Kinspire screenshot">
               <img src="assets/img/project-kinspire.png" alt="Kinspire — Kaizen improvement management app" loading="lazy" />
             </button>
-            <figcaption><h3>Kinspire</h3><p>Kaizen improvement platform: every employee submits an idea and its implementation, evaluated through multiple levels up to top management — with recognition and rewards.</p></figcaption>
+            <figcaption><h3>Kinspire</h3><p>Kaizen improvement platform: every employee submits an idea and its implementation, evaluated through multiple levels up to top management — with recognition and rewards.</p><a class="project-detail-link" href="projects/kinspire.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-smartkin.png" aria-label="Enlarge SmartKin screenshot">
               <img src="assets/img/project-smartkin.png" alt="SmartKin application" loading="lazy" />
             </button>
-            <figcaption><h3>SmartKin</h3><p>An internal application in the KIN suite at KinDairy.</p></figcaption>
+            <figcaption><h3>SMARTKIN</h3><p>Factory performance application connecting production, manpower, utility consumption, quality control, and SAP reconciliation through traceable operational data.</p><a class="project-detail-link" href="projects/smartkin.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-sales-demand-planning.png" aria-label="Enlarge Sales Demand Planning screenshot">
               <img src="assets/img/project-sales-demand-planning.png" alt="Sales Demand Planning application" loading="lazy" />
             </button>
-            <figcaption><h3>Sales Demand Planning</h3><p>Demand forecasting and sales planning that aligns production and inventory with projected customer demand.</p></figcaption>
+            <figcaption><h3>Sales Demand Planning</h3><p>Demand forecasting and sales planning that aligns production and inventory with projected customer demand.</p><a class="project-detail-link" href="projects/sales-demand-planning.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-dashboard-metabase.png" aria-label="Enlarge Centralized Dashboard Platform screenshot">
               <img src="assets/img/project-dashboard-metabase.png" alt="Centralized Dashboard Platform (Metabase)" loading="lazy" />
             </button>
-            <figcaption><h3>Centralized Dashboard Platform</h3><p>Standardized Metabase reporting for consistent, secure dashboards.</p></figcaption>
+            <figcaption><h3>Centralized Dashboard Platform</h3><p>Standardized Metabase reporting for consistent, secure dashboards.</p><a class="project-detail-link" href="projects/centralized-dashboard-platform.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-authentication-sso.png" aria-label="Enlarge Enterprise Authentication screenshot">
               <img src="assets/img/project-authentication-sso.png" alt="Enterprise Authentication Platform (Keycloak SSO)" loading="lazy" />
             </button>
-            <figcaption><h3>Enterprise Authentication</h3><p>Keycloak single sign-on across enterprise applications.</p></figcaption>
+            <figcaption><h3>Enterprise Authentication</h3><p>Keycloak single sign-on across enterprise applications.</p><a class="project-detail-link" href="projects/enterprise-authentication.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
-            <button class="proj-media" data-full="assets/img/project-ai-knowledge-dify.png" aria-label="Enlarge AI Knowledge Platform screenshot">
-              <img src="assets/img/project-ai-knowledge-dify.png" alt="AI Knowledge Platform (Dify)" loading="lazy" />
+            <button class="proj-media" data-full="assets/img/project-ai-knowledge-dify.png" aria-label="Enlarge Enterprise AI Assistant and MCP Gateway screenshot">
+              <img src="assets/img/project-ai-knowledge-dify.png" alt="Enterprise AI Assistant and MCP Gateway" loading="lazy" />
             </button>
-            <figcaption><h3>AI Knowledge Platform</h3><p>LLM assistant (Dify + MCP) over enterprise data.</p></figcaption>
+            <figcaption><h3>Enterprise AI Assistant &amp; MCP Gateway</h3><p>A centralized chat experience in App Center that connects Metabase, DBHub, and application-specific MCP services for seamless cross-application workflows within each employee’s existing permissions.</p><a class="project-detail-link" href="projects/enterprise-ai-assistant-mcp-gateway.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-procure-to-pay.png" aria-label="Enlarge Procure-to-Pay screenshot">
               <img src="assets/img/project-procure-to-pay.png" alt="Procure-to-Pay web application" loading="lazy" />
             </button>
-            <figcaption><h3>Procure-to-Pay</h3><p>Web interface over SAP for the full PR → PO → GR flow.</p></figcaption>
+            <figcaption><h3>Procure-to-Pay</h3><p>Web interface over SAP for the full PR → PO → GR flow.</p><a class="project-detail-link" href="projects/procure-to-pay.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-e-canteen.png" aria-label="Enlarge E-Canteen screenshot">
               <img src="assets/img/project-e-canteen.png" alt="E-Canteen application" loading="lazy" />
             </button>
-            <figcaption><h3>E-Canteen</h3><p>Employee meal ordering, quotas, subsidies &amp; reporting.</p></figcaption>
+            <figcaption><h3>E-Canteen</h3><p>Employee meal ordering, quotas, subsidies &amp; reporting.</p><a class="project-detail-link" href="projects/e-canteen.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <figure class="proj-card reveal">
             <button class="proj-media" data-full="assets/img/project-otsuka-go.png" aria-label="Enlarge Otsuka GO screenshot">
               <img src="assets/img/project-otsuka-go.png" alt="Otsuka GO employee platform" loading="lazy" />
             </button>
-            <figcaption><h3>Otsuka GO</h3><p>All-in-one employee platform: news, learning &amp; engagement.</p></figcaption>
+            <figcaption><h3>Otsuka GO</h3><p>All-in-one employee platform: news, learning &amp; engagement.</p><a class="project-detail-link" href="projects/otsuka-go.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
         </div>
       </div>
@@ -354,12 +360,12 @@
             <ul class="chips"><li>SAP (ABAP)</li><li>REST APIs</li><li>Keycloak</li><li>OAuth2 / OIDC</li><li>Single Sign-On</li></ul>
           </div>
           <div class="skill-group reveal">
-            <h3>Infrastructure</h3>
-            <ul class="chips"><li>Linux</li><li>Docker</li><li>Nginx</li><li>PM2</li><li>SSL / Reverse Proxy</li><li>Release Management</li></ul>
+            <h3>Cloud &amp; Infrastructure</h3>
+            <ul class="chips"><li>Google Cloud Platform (GCP)</li><li>Microsoft Azure</li><li>Linux</li><li>Docker</li><li>Nginx</li><li>PM2</li><li>SSL / Reverse Proxy</li><li>Release Management</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>Automation &amp; AI</h3>
-            <ul class="chips"><li>Playwright</li><li>Puppeteer</li><li>Web Scraping</li><li>UiPath</li><li>Dify</li><li>MCP</li><li>LLM Integration</li></ul>
+            <ul class="chips"><li>Playwright</li><li>Puppeteer</li><li>Web Scraping</li><li>UiPath</li><li>Power Automate</li><li>Dify</li><li>MCP Gateway Integration</li><li>LLM Integration</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>BI &amp; Reporting</h3>
