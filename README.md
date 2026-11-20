@@ -13,7 +13,7 @@ I enjoy turning complex business workflows into practical, maintainable systems.
 - **Enterprise applications:** web-based tools for procurement, finance, HR, and operations using TypeScript, Angular, and Node.js.
 - **Shared platforms:** centralized authentication, SAP integration, reusable APIs, service SDKs, and notifications.
 - **Data engineering:** Apache Airflow pipelines and PostgreSQL / BigQuery warehouses that bring operational data together for reporting.
-- **Automation and AI:** browser automation, enterprise AI workflows, and an App Center assistant connecting Metabase, DBHub, and application-specific MCP services through a shared gateway.
+- **Automation and AI:** browser automation and enterprise AI integration using Playwright, Puppeteer, Dify, MCP, and DBHub.
 - **Infrastructure and delivery:** Linux, Docker, Nginx, and consistent release practices for enterprise services.
 
 ## Selected projects
@@ -24,9 +24,15 @@ My portfolio highlights both business applications and the platforms behind them
 - **KIN Application Center:** a shared entry point for internal applications, dashboards, and notifications.
 - **Enterprise Authentication:** Keycloak single sign-on across enterprise applications.
 - **SAP Integration Platform:** reusable interfaces connecting business applications with SAP.
+- **Enterprise Automation Control Center:** a management application at PT ABC Kogen Dairy for ETL pipelines, browser automation, database/API synchronization, and Excel ingestion.
 - **Enterprise Data Platform:** pipelines that consolidate application, SAP, and operational data for analytics.
-- **Enterprise AI Assistant & MCP Gateway:** centralized chat in App Center that connects Metabase, DBHub, and application-specific MCP services for seamless workflows within each employee’s existing permissions. KIN Chatbot also provides conversational access to GLPI information.
+- **Enterprise AI Assistant & MCP Gateway:** centralized chat in App Center that connects Metabase, Data Storage MCP, and application-specific MCP services for seamless workflows within each employee’s existing permissions. KIN Chatbot is the customized Dify helpdesk and information workflow in App Center, coordinating employee context, credentials, memory, and API/MCP calls.
 - **Procure-to-Pay, E-Canteen, and Kinspire:** applications supporting procurement, employee services, and continuous improvement.
+- **Otsuka GO and Free TBC at Workplaces:** team contributions at PT Amerta Indah Otsuka to employee engagement and workplace health support, including medication scheduling and meal-nutrition calculation for the latter.
+
+- **Additional Otsuka applications:** Complaint Management System (QA/CS/QMS), Host-to-Host Payment & SAP Integration, AR Confirmation (WhatsApp and email), Employee Advance & Claim, and YOPPA employee listening and lifecycle surveys.
+
+- **AIO History:** company event documentation and sharing at PT Amerta Indah Otsuka, with machine-learning-based person search across event photos.
 
 [View the project showcase](https://yufaza.github.io/#projects)
 

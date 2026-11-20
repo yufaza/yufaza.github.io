@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title description">
+  <title id="title">Free TBC at Workplaces — contribution overview</title>
+  <desc id="description">An illustrative overview of contributions to medication scheduling and a meal-nutrition calculator for a workplace tuberculosis support application. Not an application screenshot.</desc>
+  <rect width="960" height="600" fill="#eef5ff"/>
+  <g font-family="Arial, sans-serif" fill="#172b4d">
+    <text x="64" y="85" font-size="20" fill="#375f96">WORKPLACE HEALTH PROGRAM SUPPORT</text>
+    <text x="64" y="150" font-size="43" font-weight="700">Free TBC at Workplaces</text>
+    <text x="64" y="196" font-size="22">Software contribution at PT Amerta Indah Otsuka</text>
+    <g fill="#fff" stroke="#c5d6ef" stroke-width="2">
+      <rect x="64" y="250" width="402" height="190" rx="18"/>
+      <rect x="492" y="250" width="402" height="190" rx="18"/>
+    </g>
+    <g fill="none" stroke="#3267ce" stroke-width="4" stroke-linecap="round">
+      <rect x="94" y="280" width="54" height="48" rx="7"/>
+      <path d="M94 295 H148 M107 274 V285 M135 274 V285 M107 308 H119 M128 308 H136"/>
+      <rect x="522" y="274" width="45" height="58" rx="7"/>
+      <path d="M532 287 H557 M532 301 H537 M549 301 H554 M532 316 H537 M549 316 H554"/>
+    </g>
+    <text x="94" y="377" font-size="25" font-weight="700">Medication scheduling</text>
+    <text x="94" y="409" font-size="19">Organize the program routine</text>
+    <text x="522" y="377" font-size="25" font-weight="700">Meal-nutrition calculator</text>
+    <text x="522" y="409" font-size="19">Support nutritional calculation</text>
+    <text x="64" y="553" fill="#526783" font-size="17">Illustrative contribution overview · Not an application screenshot</text>
+  </g>
+</svg>

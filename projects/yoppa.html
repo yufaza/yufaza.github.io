@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOPPA — Your Otsuka People Personal — Project overview | M Yusuf Fajar Zaelani</title>
+  <meta name="description" content="An HR employee-listening application created at PT Amerta Indah Otsuka for engagement, satisfaction, and employee lifecycle surveys." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/projects.css" />
+  <!-- Set theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a href="../index.html#top" class="brand" aria-label="Home">
+        <span class="brand-mark">MYF</span>
+        <span class="brand-name">M Yusuf Fajar Zaelani</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#competencies">Competencies</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#platforms">Platforms</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#awards">Awards</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-sm btn-primary" href="../assets/cv/M-Yusuf-Fajar-Zaelani-CV.pdf" download>Download CV</a>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="project-detail">
+    <section class="project-hero section-alt">
+      <div class="container">
+        <a class="project-back" href="../index.html#projects">&larr; All projects</a>
+        <div class="project-heading"><span class="kicker">Project case study</span></div>
+        <h1>YOPPA — Your Otsuka People Personal</h1>
+        <p class="project-lead">An HR employee-listening application created at PT Amerta Indah Otsuka for engagement, satisfaction, and employee lifecycle surveys.</p>
+      </div>
+    </section>
+    <div class="container project-layout">
+      <aside class="project-outline" aria-label="On this page"><span class="kicker">On this page</span><nav><a href="#overview">Overview</a><a href="#challenge">The challenge</a><a href="#features">Key features</a><a href="#workflow">How it works</a><a href="#contribution">My contribution</a><a href="#technology">Technology & architecture</a><a href="#outcomes">Outcomes & lessons</a></nav><a class="project-contact" href="../index.html#contact">Discuss this project &rarr;</a></aside>
+      <article class="project-story" aria-label="YOPPA — Your Otsuka People Personal case study">
+        <figure class="project-cover"><img src="../assets/img/project-yoppa.svg" alt="Illustrative YOPPA contribution overview" width="960" height="600" /><figcaption>Portfolio illustration · YOPPA — Your Otsuka People Personal. This visual is not an application screenshot.</figcaption></figure>
+<section id="overview" class="case-section"><span class="kicker">01</span><h2>YOPPA at PT Amerta Indah Otsuka</h2><p>I created YOPPA (Your Otsuka People Personal) as a form-based HR survey application. It supports employee engagement, satisfaction, and feedback at defined points in the employee journey.</p></section>
+<section id="challenge" class="case-section"><span class="kicker">02</span><h2>The business need</h2><p>Feedback at one month in a job answers a different question from feedback after a year. HR needs both milestone-based check-ins and recurring surveys, with enough context to understand when the feedback was collected.</p></section>
+<section id="features" class="case-section"><span class="kicker">03</span><h2>Project focus</h2><ul class="case-list"><li><strong>Employee lifecycle surveys</strong><p>Tenure-based checkpoints include one, three, and six months, one year, two years, and recurring annual surveys.</p></li><li><strong>Engagement and satisfaction surveys</strong><p>Form-based feedback supports HR listening across the employee experience, alongside recurring annual surveys.</p></li><li><strong>Scheduled survey delivery</strong><p>The employee-survey experience described in my CV includes a configurable scheduler with email and WhatsApp distribution, including lifecycle and exit-related feedback.</p></li></ul></section>
+<section id="workflow" class="case-section"><span class="kicker">04</span><h2>How the workflow connects</h2><figure class="system-flow"><figcaption><strong>YOPPA: the business workflow</strong><span>A functional view of the contribution at PT Amerta Indah Otsuka.</span></figcaption><div class="system-flow-scroll" tabindex="0" role="region" aria-label="YOPPA workflow; scroll horizontally on smaller screens"><svg class="system-flow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="yoppa-flow-title yoppa-flow-desc"><title id="yoppa-flow-title">YOPPA business flow</title><desc id="yoppa-flow-desc">Define the listening purpose → Select the checkpoint → Prepare the form → Reach employees → Submit feedback → Understand the experience</desc><defs><marker id="yoppa-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="currentColor"/></marker></defs><g class="flow-lanes"><rect x="12" y="16" width="876" height="428" rx="16"/></g><g class="flow-edges" marker-end="url(#yoppa-flow-arrow)"><path d="M274 110 L330 110"/><path d="M570 110 L626 110"/><path d="M746 155 L746 290"/><path d="M626 335 L570 335"/><path d="M330 335 L274 335"/></g><g class="flow-card" transform="translate(34 65)"><rect width="240" height="90" rx="12"/><text class="flow-label" x="16" y="24">HR</text><text class="flow-name" x="16" y="49">Define the listening purpose</text><text class="flow-detail" x="16" y="72">Lifecycle, engagement, satisfaction</text></g><g class="flow-card" transform="translate(330 65)"><rect width="240" height="90" rx="12"/><text class="flow-label" x="16" y="24">TIMING</text><text class="flow-name" x="16" y="49">Select the checkpoint</text><text class="flow-detail" x="16" y="72">Tenure milestone or annual cycle</text></g><g class="flow-card" transform="translate(626 65)"><rect width="240" height="90" rx="12"/><text class="flow-label" x="16" y="24">SURVEY</text><text class="flow-name" x="16" y="49">Prepare the form</text><text class="flow-detail" x="16" y="72">Ask questions for that context</text></g><g class="flow-card" transform="translate(626 290)"><rect width="240" height="90" rx="12"/><text class="flow-label" x="16" y="24">DISTRIBUTION</text><text class="flow-name" x="16" y="49">Reach employees</text><text class="flow-detail" x="16" y="72">Scheduled survey communication</text></g><g class="flow-card" transform="translate(330 290)"><rect width="240" height="90" rx="12"/><text class="flow-label" x="16" y="24">EMPLOYEE</text><text class="flow-name" x="16" y="49">Submit feedback</text><text class="flow-detail" x="16" y="72">Respond at the relevant moment</text></g><g class="flow-card flow-result" transform="translate(34 290)"><rect width="240" height="90" rx="12"/><text class="flow-label" x="16" y="24">HR REVIEW</text><text class="flow-name" x="16" y="49">Understand the experience</text><text class="flow-detail" x="16" y="72">Use the survey context</text></g></svg></div><p class="system-flow-note">The diagram explains business responsibilities and information flow, rather than the former company’s internal deployment.</p></figure></section>
+<section id="contribution" class="case-section"><span class="kicker">05</span><h2>My contribution</h2><p>I created the survey application and its configurable delivery workflow, supporting HR collection of engagement, satisfaction, and lifecycle feedback. The work connects the questionnaire with the timing and communication needed to reach employees.</p></section>
+<section id="technology" class="case-section"><span class="kicker">06</span><h2>Functional architecture</h2><p>The functional flow connects survey forms, checkpoint or recurring timing, employee communication, and response collection. “Employee listening” describes the overall purpose; “employee lifecycle surveys” describes the milestone-based part. Annual engagement surveys complement those checkpoints.</p></section>
+<section id="outcomes" class="case-section"><span class="kicker">07</span><h2>Experience &amp; lessons</h2><p>YOPPA gives HR a structured way to listen at different moments in the employee journey. The design lesson is to keep a response connected to its survey purpose and timing: an onboarding checkpoint and an annual engagement survey should not be interpreted as identical signals.</p></section>
+      </article>
+    </div>
+    <nav class="container project-pagination" aria-label="More projects"><a href="advance-claim.html"><small>&larr; Previous project</small><strong>Advance &amp; Claim</strong></a><a href="aio-history.html"><small>Next project &rarr;</small><strong>AIO History</strong></a></nav>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> M Yusuf Fajar Zaelani</p>
+      <a href="#top" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

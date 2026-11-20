@@ -70,6 +70,41 @@
     sections.forEach(function (s) { spy.observe(s); });
   }
 
+  /* ---------- Projects by business function ---------- */
+  var projectFilters = document.querySelector('.project-filters');
+  if (projectFilters) {
+    var projectCards = document.querySelectorAll('#project-grid .proj-card');
+    var filterButtons = projectFilters.querySelectorAll('button');
+    var projectCount = document.getElementById('project-count');
+    function filterProjects(category) {
+      var visibleCount = 0;
+      projectCards.forEach(function (card) {
+        var matches = category === 'all' || card.getAttribute('data-categories').split(' ').indexOf(category) !== -1;
+        card.hidden = !matches;
+        if (matches) {
+          visibleCount++;
+          card.classList.add('visible');
+        }
+      });
+      filterButtons.forEach(function (button) {
+        button.setAttribute('aria-pressed', String(button.getAttribute('data-project-filter') === category));
+      });
+      projectCount.textContent = 'Showing ' + visibleCount + ' of ' + projectCards.length + ' projects';
+    }
+    filterButtons.forEach(function (button) {
+      var category = button.getAttribute('data-project-filter');
+      var count = 0;
+      projectCards.forEach(function (card) {
+        if (category === 'all' || card.getAttribute('data-categories').split(' ').indexOf(category) !== -1) count++;
+      });
+      button.textContent += ' (' + count + ')';
+      button.addEventListener('click', function () { filterProjects(category); });
+    });
+    projectFilters.hidden = false;
+    projectCount.hidden = false;
+    filterProjects('all');
+  }
+
   /* ---------- Lightbox for project screenshots ---------- */
   var lightbox = document.getElementById('lightbox');
   var lightboxImg = document.getElementById('lightbox-img');

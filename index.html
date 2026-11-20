@@ -147,7 +147,7 @@
           <div class="comp-card reveal"><span class="comp-ico">📊</span><h3>Data Engineering</h3><p>ETL/ELT pipelines &amp; data warehouse design.</p></div>
           <div class="comp-card reveal"><span class="comp-ico">🐳</span><h3>Infrastructure &amp; DevOps</h3><p>Linux, Docker, Nginx, release management.</p></div>
           <div class="comp-card reveal"><span class="comp-ico">🤖</span><h3>Browser Automation</h3><p>Scheduled automation, scraping, portal integration.</p></div>
-          <div class="comp-card reveal"><span class="comp-ico">🧠</span><h3>AI / LLM Integration</h3><p>Centralized assistants and MCP gateways connecting Metabase, DBHub, and enterprise applications with user-specific access.</p></div>
+          <div class="comp-card reveal"><span class="comp-ico">🧠</span><h3>AI / LLM Integration</h3><p>Centralized assistants and MCP gateways connecting Metabase, Data Storage MCP, and enterprise applications with user-specific access.</p></div>
           <div class="comp-card reveal"><span class="comp-ico">👥</span><h3>Technical Leadership</h3><p>Mentoring, reviews, and engineering standards.</p></div>
           <div class="comp-card reveal"><span class="comp-ico">🔌</span><h3>API Design &amp; Integration</h3><p>Consistent, well-documented REST interfaces.</p></div>
         </div>
@@ -178,9 +178,9 @@
                 <li><strong>Designed and built a centralized authentication platform</strong> on Keycloak (OAuth2, OpenID Connect, PKCE), bringing multiple enterprise applications under single sign-on.</li>
                 <li><strong>Architected central SAP integration middleware and a shared SDK</strong> so applications consume enterprise services through reusable APIs — removing point-to-point connections and duplicated code.</li>
                 <li><strong>Built an enterprise data platform</strong> with Apache Airflow (ETL/ELT), consolidating SAP, application, Excel, and operational data into a PostgreSQL and BigQuery warehouse.</li>
-                <li><strong>Delivered a browser automation platform</strong> to replace legacy RPA — scheduled automation, web scraping, B2B portal integration, and automated report retrieval.</li>
-                <li><strong>Implemented a centralized AI assistant in KIN Application Center</strong>, connecting Metabase, DBHub, and application-specific MCP services through an MCP gateway for seamless workflows within each employee’s existing permissions.</li>
-                <li><strong>Standardized production infrastructure and release management</strong> across Linux servers (Docker, Nginx, PM2, SSL, reverse proxy), improving deployment consistency and reliability.</li>
+                <li><strong>Created Enterprise Automation Control Center</strong> for ETL pipelines, browser automation, database/API synchronization, and Excel ingestion, with shared configuration and execution visibility.</li>
+                <li><strong>Implemented a centralized AI assistant in KIN Application Center</strong>, connecting Metabase, Data Storage MCP, and application-specific MCP services through an MCP gateway for seamless workflows within each employee’s existing permissions.</li>
+                <li><strong>Standardized production infrastructure and release management</strong> across server environments, containerized services, web servers, process management, and secure reverse proxies, improving deployment consistency and reliability.</li>
               </ul>
             </div>
           </article>
@@ -199,6 +199,7 @@
                 <li><strong>Developed a secure host-to-host payment integration</strong> with SAP — validating, encrypting, and transmitting payment files to partner banks with logging and notification.</li>
                 <li><strong>Automated finance and tax processes</strong> (SAP journal &amp; report automation, E-Faktur), reducing manual effort and errors on repetitive tasks.</li>
                 <li><strong>Evolved the automation approach</strong> — from UiPath (RPA) toward a browser-based automation architecture for greater flexibility and maintainability.</li>
+                <li><strong>Created business applications</strong> including Complaint Management System for QA, CS, and QMS; AR Confirmation through a paid WhatsApp gateway and email; Advance/Claim; YOPPA for employee listening and lifecycle surveys; and AIO History for event documentation, sharing, and machine-learning-based person search.</li>
                 <li><strong>Partnered cross-functionally</strong> with business users to deliver applications that improved operational efficiency and data accuracy.</li>
               </ul>
             </div>
@@ -239,7 +240,7 @@
           <div class="plat-card reveal"><span class="plat-ico">🤖</span><h3>Browser Automation Platform</h3><p>Scheduled automation, web scraping, B2B portal integration, and automated report retrieval — replacing legacy RPA.</p></div>
           <div class="plat-card reveal"><span class="plat-ico">📣</span><h3>Notification Platform</h3><p>A single service delivering email and push notifications, designed to extend to future channels.</p></div>
           <div class="plat-card reveal"><span class="plat-ico">📈</span><h3>Centralized Dashboard Platform</h3><p>Standardized, secure reporting through Metabase instead of direct database access.</p></div>
-          <div class="plat-card reveal"><span class="plat-ico">🧠</span><h3>Enterprise AI Assistant &amp; MCP Gateway</h3><p>App Center chat connects Metabase, DBHub, and application-specific MCP services through a shared gateway, within each employee’s existing permissions.</p></div>
+          <div class="plat-card reveal"><span class="plat-ico">🧠</span><h3>Enterprise AI Assistant &amp; MCP Gateway</h3><p>App Center chat connects Metabase, Data Storage MCP, and application-specific MCP services through a shared gateway, within each employee’s existing permissions.</p></div>
           <div class="plat-card reveal"><span class="plat-ico">📦</span><h3>Shared Service SDK</h3><p>Standardized interfaces and central configuration for consuming enterprise services, cutting duplicated code.</p></div>
         </div>
       </div>
@@ -253,82 +254,106 @@
         <div class="section-head reveal">
           <span class="kicker">05 — Showcase</span>
           <h2>Featured Projects</h2>
-          <p class="section-intro">Explore the projects and the systems behind them. Open a project for its draft case study, or click an image to enlarge.</p>
+          <p class="section-intro">Explore projects by business function. Some serve multiple departments; select a label to focus the gallery, or open a project to explore its case study.</p>
         </div>
-        <div class="proj-grid">
-          <figure class="proj-card reveal" id="project-ihelp-workspace">
+        <div class="project-filters" role="group" aria-label="Filter projects by business function" hidden>
+          <button type="button" data-project-filter="all" aria-pressed="true" aria-controls="project-grid">All projects</button>
+          <button type="button" data-project-filter="it" aria-pressed="false" aria-controls="project-grid">IT &amp; Digital Platforms</button>
+          <button type="button" data-project-filter="data" aria-pressed="false" aria-controls="project-grid">Data, AI &amp; Automation</button>
+          <button type="button" data-project-filter="hr" aria-pressed="false" aria-controls="project-grid">HR &amp; Employee Services</button>
+          <button type="button" data-project-filter="operations" aria-pressed="false" aria-controls="project-grid">Manufacturing &amp; Operations</button>
+          <button type="button" data-project-filter="sales" aria-pressed="false" aria-controls="project-grid">Sales &amp; Distribution</button>
+          <button type="button" data-project-filter="finance" aria-pressed="false" aria-controls="project-grid">Finance &amp; Procurement</button>
+          <button type="button" data-project-filter="quality" aria-pressed="false" aria-controls="project-grid">Quality &amp; Customer Service</button>
+        </div>
+        <p class="project-count" id="project-count" role="status" hidden></p>
+        <div class="proj-grid" id="project-grid">
+          <figure class="proj-card reveal" data-categories="it" id="project-ihelp-workspace">
             <button class="proj-media" data-full="assets/img/project-ihelp-workspace.svg" aria-label="Enlarge iHelp Workspace capability diagram">
               <img src="assets/img/project-ihelp-workspace.svg" alt="Illustrative iHelp Workspace overview: projects, tasks, meetings, reporting, and permission-aware MCP integration" loading="lazy" />
             </button>
-            <figcaption><h3>iHelp Workspace</h3><p>GLPI-integrated collaboration workspace for projects, task tracking, meetings and minutes, calendars, and reporting. Its MCP interface lets AI assistants work with authorized workspace capabilities while preserving user permissions and record visibility.</p><a class="project-detail-link" href="projects/ihelp-workspace.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>IT &amp; Digital Platforms</li></ul><h3>iHelp Workspace</h3><p>A GLPI-integrated collaboration workspace connecting projects, daily tasks, meetings, AI-assisted follow-up, and reporting, with an MCP interface that follows the same user permissions.</p><a class="project-detail-link" href="projects/ihelp-workspace.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
           <!-- REPLACE each image in assets/img/ with your real screenshot (keep the same file name). -->
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="it hr">
             <button class="proj-media" data-full="assets/img/project-kin-application-center.png" aria-label="Enlarge KIN Application Center screenshot">
               <img src="assets/img/project-kin-application-center.png" alt="KIN Application Center (PWA)" loading="lazy" />
             </button>
-            <figcaption><h3>KIN Application Center</h3><p>The main enterprise PWA and entry point to internal apps — with shared dashboards, notifications, and a centralized AI assistant connected through an MCP gateway to Metabase, DBHub, and application-specific MCP services, within each employee’s existing permissions.</p><a class="project-detail-link" href="projects/kin-application-center.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>IT &amp; Digital Platforms</li><li>HR &amp; Employee Services</li></ul><h3>KIN Application Center</h3><p>The main enterprise PWA and entry point to internal apps — with shared dashboards, notifications, and a centralized AI assistant connected through an MCP gateway to Metabase, Data Storage MCP, and application-specific MCP services, within each employee’s existing permissions.</p><a class="project-detail-link" href="projects/kin-application-center.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="it data">
             <button class="proj-media" data-full="assets/img/project-kin-chatbot.png" aria-label="Enlarge KIN Chatbot Assistant screenshot">
-              <img src="assets/img/project-kin-chatbot.png" alt="KIN Chatbot Assistant (GLPI-connected)" loading="lazy" />
+              <img src="assets/img/project-kin-chatbot.png" alt="KIN Chatbot Assistant: customized Dify helpdesk and information workflow" loading="lazy" />
             </button>
-            <figcaption><h3>KIN Chatbot Assistant</h3><p>Conversational AI assistant connected to GLPI — answers questions about tasks, projects, and assets so teams get operational information instantly.</p><a class="project-detail-link" href="projects/kin-chatbot-assistant.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>IT &amp; Digital Platforms</li><li>Data, AI &amp; Automation</li></ul><h3>KIN Chatbot Assistant</h3><p>An employee-aware helpdesk and information assistant in App Center, powered by a customized Dify workflow with conversational memory, credential handling, and API/MCP orchestration.</p><a class="project-detail-link" href="projects/kin-chatbot-assistant.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="operations">
             <button class="proj-media" data-full="assets/img/project-kinspire.png" aria-label="Enlarge Kinspire screenshot">
               <img src="assets/img/project-kinspire.png" alt="Kinspire — Kaizen improvement management app" loading="lazy" />
             </button>
-            <figcaption><h3>Kinspire</h3><p>Kaizen improvement platform: every employee submits an idea and its implementation, evaluated through multiple levels up to top management — with recognition and rewards.</p><a class="project-detail-link" href="projects/kinspire.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>Manufacturing &amp; Operations</li></ul><h3>Kinspire</h3><p>An employee improvement platform that connects Kaizen ideas, implementation evidence, multi-stage review, evaluation, and recognition in one traceable workflow.</p><a class="project-detail-link" href="projects/kinspire.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="operations quality">
             <button class="proj-media" data-full="assets/img/project-smartkin.png" aria-label="Enlarge SmartKin screenshot">
               <img src="assets/img/project-smartkin.png" alt="SmartKin application" loading="lazy" />
             </button>
-            <figcaption><h3>SMARTKIN</h3><p>Factory performance application connecting production, manpower, utility consumption, quality control, and SAP reconciliation through traceable operational data.</p><a class="project-detail-link" href="projects/smartkin.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>Manufacturing &amp; Operations</li><li>Quality &amp; Customer Service</li></ul><h3>SMARTKIN</h3><p>Factory performance application connecting production, manpower, utility consumption, quality control, and SAP reconciliation through traceable operational data.</p><a class="project-detail-link" href="projects/smartkin.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="sales">
             <button class="proj-media" data-full="assets/img/project-sales-demand-planning.png" aria-label="Enlarge Sales Demand Planning screenshot">
               <img src="assets/img/project-sales-demand-planning.png" alt="Sales Demand Planning application" loading="lazy" />
             </button>
-            <figcaption><h3>Sales Demand Planning</h3><p>Demand forecasting and sales planning that aligns production and inventory with projected customer demand.</p><a class="project-detail-link" href="projects/sales-demand-planning.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>Sales &amp; Distribution</li></ul><h3>Sales Demand Planning</h3><p>A distributor replenishment and fulfillment workspace connecting monthly plans, order confirmations, approvals, delivery tracking, and sales and inventory analytics.</p><a class="project-detail-link" href="projects/sales-demand-planning.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="data hr">
             <button class="proj-media" data-full="assets/img/project-dashboard-metabase.png" aria-label="Enlarge Centralized Dashboard Platform screenshot">
               <img src="assets/img/project-dashboard-metabase.png" alt="Centralized Dashboard Platform (Metabase)" loading="lazy" />
             </button>
-            <figcaption><h3>Centralized Dashboard Platform</h3><p>Standardized Metabase reporting for consistent, secure dashboards.</p><a class="project-detail-link" href="projects/centralized-dashboard-platform.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>Data, AI &amp; Automation</li><li>HR &amp; Employee Services</li></ul><h3>Centralized Dashboard Platform</h3><p>Metabase-backed interactive dashboards, slide playlists for shared displays, and targeted employee news, with centralized content and audience management.</p><a class="project-detail-link" href="projects/centralized-dashboard-platform.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="it hr">
             <button class="proj-media" data-full="assets/img/project-authentication-sso.png" aria-label="Enlarge Enterprise Authentication screenshot">
               <img src="assets/img/project-authentication-sso.png" alt="Enterprise Authentication Platform (Keycloak SSO)" loading="lazy" />
             </button>
-            <figcaption><h3>Enterprise Authentication</h3><p>Keycloak single sign-on across enterprise applications.</p><a class="project-detail-link" href="projects/enterprise-authentication.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>IT &amp; Digital Platforms</li><li>HR &amp; Employee Services</li></ul><h3>Enterprise Authentication</h3><p>A centralized employee identity and access platform connecting Keycloak SSO, HRIS, Active Directory, and factory biometric and RFID access through an in-house application.</p><a class="project-detail-link" href="projects/enterprise-authentication.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="data it">
             <button class="proj-media" data-full="assets/img/project-ai-knowledge-dify.png" aria-label="Enlarge Enterprise AI Assistant and MCP Gateway screenshot">
               <img src="assets/img/project-ai-knowledge-dify.png" alt="Enterprise AI Assistant and MCP Gateway" loading="lazy" />
             </button>
-            <figcaption><h3>Enterprise AI Assistant &amp; MCP Gateway</h3><p>A centralized chat experience in App Center that connects Metabase, DBHub, and application-specific MCP services for seamless cross-application workflows within each employee’s existing permissions.</p><a class="project-detail-link" href="projects/enterprise-ai-assistant-mcp-gateway.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>Data, AI &amp; Automation</li><li>IT &amp; Digital Platforms</li></ul><h3>Enterprise AI Assistant &amp; MCP Gateway</h3><p>The cross-application AI integration behind App Center: a shared MCP gateway connecting reporting, data storage, and business application services within the employee’s existing permissions.</p><a class="project-detail-link" href="projects/enterprise-ai-assistant-mcp-gateway.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="data it" id="project-automation-control-center"><button class="proj-media" data-full="assets/img/project-automation-control-center.svg" aria-label="Enlarge Enterprise Automation Control Center capability diagram"><img src="assets/img/project-automation-control-center.svg" alt="Illustrative Enterprise Automation Control Center overview: ETL, web automation, database and Excel synchronization" loading="lazy" /></button><figcaption><ul class="project-labels" aria-label="Business functions"><li>Data, AI &amp; Automation</li><li>IT &amp; Digital Platforms</li></ul><h3>Enterprise Automation Control Center</h3><p>A control center created at PT ABC Kogen Dairy for ETL pipelines, browser automation, database synchronization, API ingestion, and Excel-to-database workflows.</p><a class="project-detail-link" href="projects/enterprise-automation-control-center.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption></figure>
+          <figure class="proj-card reveal" data-categories="finance">
             <button class="proj-media" data-full="assets/img/project-procure-to-pay.png" aria-label="Enlarge Procure-to-Pay screenshot">
               <img src="assets/img/project-procure-to-pay.png" alt="Procure-to-Pay web application" loading="lazy" />
             </button>
-            <figcaption><h3>Procure-to-Pay</h3><p>Web interface over SAP for the full PR → PO → GR flow.</p><a class="project-detail-link" href="projects/procure-to-pay.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>Finance &amp; Procurement</li></ul><h3>Procure-to-Pay</h3><p>SAP-backed PR → PO → GR procurement, with optional RFQ support for quotations handled in the application.</p><a class="project-detail-link" href="projects/procure-to-pay.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="hr operations">
             <button class="proj-media" data-full="assets/img/project-e-canteen.png" aria-label="Enlarge E-Canteen screenshot">
               <img src="assets/img/project-e-canteen.png" alt="E-Canteen application" loading="lazy" />
             </button>
-            <figcaption><h3>E-Canteen</h3><p>Employee meal ordering, quotas, subsidies &amp; reporting.</p><a class="project-detail-link" href="projects/e-canteen.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>HR &amp; Employee Services</li><li>Manufacturing &amp; Operations</li></ul><h3>E-Canteen</h3><p>Employee meal operations connecting weekly schedules, shift templates, extra-meal planning, RFID attendance, and reporting.</p><a class="project-detail-link" href="projects/e-canteen.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
-          <figure class="proj-card reveal">
+          <figure class="proj-card reveal" data-categories="hr">
             <button class="proj-media" data-full="assets/img/project-otsuka-go.png" aria-label="Enlarge Otsuka GO screenshot">
               <img src="assets/img/project-otsuka-go.png" alt="Otsuka GO employee platform" loading="lazy" />
             </button>
-            <figcaption><h3>Otsuka GO</h3><p>All-in-one employee platform: news, learning &amp; engagement.</p><a class="project-detail-link" href="projects/otsuka-go.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>HR &amp; Employee Services</li></ul><h3>Otsuka GO</h3><p>Team contribution at PT Amerta Indah Otsuka to an employee platform for news, information, learning, training, and engagement.</p><a class="project-detail-link" href="projects/otsuka-go.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
           </figure>
+          <figure class="proj-card reveal" data-categories="hr" id="project-free-tbc-workplaces">
+            <button class="proj-media" data-full="assets/img/project-free-tbc-workplaces.svg" aria-label="Enlarge Free TBC at Workplaces contribution diagram">
+              <img src="assets/img/project-free-tbc-workplaces.svg" alt="Illustrative Free TBC at Workplaces contribution overview: medication scheduling and meal-nutrition calculation" loading="lazy" />
+            </button>
+            <figcaption><ul class="project-labels" aria-label="Business functions"><li>HR &amp; Employee Services</li></ul><h3>Free TBC at Workplaces</h3><p>Contribution at PT Amerta Indah Otsuka to a workplace TB-support application, focused on medication scheduling and a meal-nutrition calculator.</p><a class="project-detail-link" href="projects/free-tbc-at-workplaces.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption>
+          </figure>
+<figure class="proj-card reveal" data-categories="quality" id="project-complaint-management-system"><button class="proj-media" data-full="assets/img/project-complaint-management-system.svg" aria-label="Enlarge Complaint Management System contribution diagram"><img src="assets/img/project-complaint-management-system.svg" alt="Illustrative Complaint Management System contribution overview" loading="lazy" /></button><figcaption><ul class="project-labels" aria-label="Business functions"><li>Quality &amp; Customer Service</li></ul><h3>Complaint Management System (CMS)</h3><p>A complaint-management application created at PT Amerta Indah Otsuka for QA, Customer Service, and QMS teams.</p><a class="project-detail-link" href="projects/complaint-management-system.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption></figure>
+<figure class="proj-card reveal" data-categories="finance" id="project-host-to-host-payment-sap"><button class="proj-media" data-full="assets/img/project-host-to-host-payment-sap.svg" aria-label="Enlarge Host-to-Host Payment contribution diagram"><img src="assets/img/project-host-to-host-payment-sap.svg" alt="Illustrative Host-to-Host Payment contribution overview" loading="lazy" /></button><figcaption><ul class="project-labels" aria-label="Business functions"><li>Finance &amp; Procurement</li></ul><h3>Host-to-Host Payment &amp; SAP Integration</h3><p>A payment integration created at PT Amerta Indah Otsuka connecting SAP payment information with partner-bank file exchange.</p><a class="project-detail-link" href="projects/host-to-host-payment-sap.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption></figure>
+<figure class="proj-card reveal" data-categories="finance sales" id="project-ar-confirmation"><button class="proj-media" data-full="assets/img/project-ar-confirmation.svg" aria-label="Enlarge AR Confirmation contribution diagram"><img src="assets/img/project-ar-confirmation.svg" alt="Illustrative AR Confirmation contribution overview" loading="lazy" /></button><figcaption><ul class="project-labels" aria-label="Business functions"><li>Finance &amp; Procurement</li><li>Sales &amp; Distribution</li></ul><h3>Accounts Receivable (AR) Confirmation</h3><p>An AR confirmation application created at PT Amerta Indah Otsuka for branch, distribution, and General Trade (GT) communication through a paid WhatsApp gateway and email.</p><a class="project-detail-link" href="projects/ar-confirmation.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption></figure>
+<figure class="proj-card reveal" data-categories="finance hr" id="project-advance-claim"><button class="proj-media" data-full="assets/img/project-advance-claim.svg" aria-label="Enlarge Advance &amp; Claim contribution diagram"><img src="assets/img/project-advance-claim.svg" alt="Illustrative Advance &amp; Claim contribution overview" loading="lazy" /></button><figcaption><ul class="project-labels" aria-label="Business functions"><li>Finance &amp; Procurement</li><li>HR &amp; Employee Services</li></ul><h3>Employee Advance &amp; Reimbursement Claim</h3><p>An employee finance application created at PT Amerta Indah Otsuka for advance requests and reimbursement claims, integrated with SAP information.</p><a class="project-detail-link" href="projects/advance-claim.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption></figure>
+<figure class="proj-card reveal" data-categories="hr" id="project-yoppa"><button class="proj-media" data-full="assets/img/project-yoppa.svg" aria-label="Enlarge YOPPA contribution diagram"><img src="assets/img/project-yoppa.svg" alt="Illustrative YOPPA contribution overview" loading="lazy" /></button><figcaption><ul class="project-labels" aria-label="Business functions"><li>HR &amp; Employee Services</li></ul><h3>YOPPA — Your Otsuka People Personal</h3><p>An HR employee-listening application created at PT Amerta Indah Otsuka for engagement, satisfaction, and employee lifecycle surveys.</p><a class="project-detail-link" href="projects/yoppa.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption></figure>
+<figure class="proj-card reveal" data-categories="hr data" id="project-aio-history"><button class="proj-media" data-full="assets/img/project-aio-history.svg" aria-label="Enlarge AIO History capability diagram"><img src="assets/img/project-aio-history.svg" alt="Illustrative AIO History overview: event archive, sharing, and person-based photo search" loading="lazy" /></button><figcaption><ul class="project-labels" aria-label="Business functions"><li>HR &amp; Employee Services</li><li>Data, AI &amp; Automation</li></ul><h3>AIO History</h3><p>A company event-documentation archive developed at PT Amerta Indah Otsuka, combining departmental uploads, file sharing, and early machine-learning-based person search across event photos.</p><a class="project-detail-link" href="projects/aio-history.html">View project <span aria-hidden="true">&rarr;</span></a></figcaption></figure>
         </div>
       </div>
     </section>
@@ -357,19 +382,23 @@
           </div>
           <div class="skill-group reveal">
             <h3>Enterprise &amp; Auth</h3>
-            <ul class="chips"><li>SAP (ABAP)</li><li>REST APIs</li><li>Keycloak</li><li>OAuth2 / OIDC</li><li>Single Sign-On</li></ul>
+            <ul class="chips"><li>SAP (ABAP)</li><li>REST APIs</li><li>Identity &amp; Access Management</li><li>OAuth2 / OIDC</li><li>Single Sign-On</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>Cloud &amp; Infrastructure</h3>
-            <ul class="chips"><li>Google Cloud Platform (GCP)</li><li>Microsoft Azure</li><li>Linux</li><li>Docker</li><li>Nginx</li><li>PM2</li><li>SSL / Reverse Proxy</li><li>Release Management</li></ul>
+            <ul class="chips"><li>Google Cloud Platform (GCP)</li><li>Microsoft Azure</li><li>Linux</li><li>Docker</li><li>Web Server &amp; Reverse Proxy Management</li><li>Process &amp; Service Management</li><li>TLS Certificate Management</li><li>Release Management</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>Automation &amp; AI</h3>
-            <ul class="chips"><li>Playwright</li><li>Puppeteer</li><li>Web Scraping</li><li>UiPath</li><li>Power Automate</li><li>Dify</li><li>MCP Gateway Integration</li><li>LLM Integration</li></ul>
+            <ul class="chips"><li>UiPath</li><li>Microsoft Power Automate</li><li>Browser Automation</li><li>Web Scraping</li><li>Conversational AI Workflows</li><li>Data Access Integration</li><li>MCP Gateway Integration</li><li>LLM Integration</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>BI &amp; Reporting</h3>
-            <ul class="chips"><li>Metabase</li></ul>
+            <ul class="chips"><li>Metabase</li><li>Interactive Dashboards</li><li>Reporting &amp; Data Visualization</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Geolocation &amp; Mapping</h3>
+            <ul class="chips"><li>Geolocation Integration</li><li>Interactive Geographic Maps</li><li>Local &amp; Site Layout Mapping</li></ul>
           </div>
         </div>
       </div>
